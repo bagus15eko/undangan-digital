@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Nurfa & Anjas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <p>Selamat Datang di Undangan Pernikahan</p>
+        <h1>Nurfa & Anjas</h1>
+        <button type="button" onclick="bukaUndangan()" class="btn-buka">Buka Undangan</button>
+    </div>
+</div>
+    <header class="hero">
+        <div class="hero-content">
+            <p>The Wedding of</p>
+            <h1>Nurfa & Anjas</h1>
+            <p>30 Maret 2026</p>
+        </div>
+    </header>
+
+    <section class="countdown-container">
+    <h2 class="title-countdown">Menuju Hari Bahagia</h2>
+    <div id="timer">
+        <div class="time-box">
+            <span id="days">00</span>
+            <p>Hari</p>
+        </div>
+        <div class="time-box">
+            <span id="hours">00</span>
+            <p>Jam</p>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Menit</p>
+        </div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <p>Detik</p>
+        </div>
+    </div>
+</section>
+
+    <section class="details">
+        <div class="card">
+            <h3>Akad Nikah</h3>
+            <p>Pukul 09.00 - 10.00 WIB</p>
+            <p>Jl. Bhakti No.136 Malang</p>
+        </div>
+        <div class="card">
+            <h3>Resepsi</h3>
+            <p>Pukul 11.00 - Selesai</p>
+            <p>Jl. Bhakti No.136 Malang</p>
+        </div>
+    </section>
+
+    <section class="location-section">
+    <h2>Lokasi Acara</h2>
+    <p>Jl. Bhakti No.136, Balearjosari, Kec. Blimbing, Kota Malang, Jawa Timur 65126</p>
+    
+    <div class="map-container">
+        <iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.724711234603!2d112.6466513742834!3d-7.923795892099849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6298be37d3c7d%3A0x3505e94f9dad82b6!2sJl.%20Bhakti%20No.136%2C%20Balearjosari%2C%20Kec.%20Blimbing%20%2C%20Kota%20Malang%2C%20Jawa%20Timur%2065126!5e0!3m2!1sid!2sid!4v1766713868788!5m2!1sid!2sid" style="width:100%; height:450px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="https://maps.app.goo.gl/8zbYiMmdvjAhnV6y6" target="_blank" class="btn-map">
+            <button type="button" onclick="bukamaps()" class="btn-buka">Buka Maps</button>
+           
+        </a>
+    </div>
+</section>
+
+<section class="rsvp-section">
+    <h2>Buku Tamu & Konfirmasi Kehadiran</h2>
+    <p>Mohon konfirmasikan kehadiran Anda melalui formulir di bawah ini:</p>
+    
+    <div class="rsvp-form">
+        <input type="text" id="nama-tamu" placeholder="Nama Lengkap" required>
+        <select id="status-kehadiran">
+            <option value="">Pilih Kehadiran</option>
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+            <option value="Masih Ragu">Masih Ragu</option>
+        </select>
+        <textarea id="pesan-tamu" placeholder="Ucapan atau Doa Restu"></textarea>
+    
+        <button onclick="kirimRSVP()" class="btn-kirim">Kirim via WhatsApp</button>
+    </div>
+</section>
+<!---
+<div class="gallery">
+  <img src="foto-pernikahan-1.jpg" alt="Wedding 1" class="zoomable" onclick="openModal(this.src)">
+  <img src="foto-pernikahan-2.jpg" alt="Wedding 2" class="zoomable" onclick="openModal(this.src)">
+</div>
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgPopup">
+</div>
+-->
+<section class="gallery-section">
+    <h2>Momen Bahagia Kami</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('foto1.jpg')">
+            <img src="foto1.jpeg" alt="Pre-wedding 1">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('foto2.jpg')">
+            <img src="foto2.jpeg" alt="Pre-wedding 2">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('foto3.jpg')">
+            <img src="foto3.jpeg" alt="Pre-wedding 3">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('foto4.jpg')">
+            <img src="foto4.jpeg" alt="Pre-wedding 4">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('foto4.jpg')">
+            <img src="foto5.jpeg" alt="Pre-wedding 5">
+        </div>
+        <div class="gallery-item" onclick="openLightbox('foto4.jpg')">
+            <img src="foto6.jpeg" alt="Pre-wedding 6">
+        </div>
+    </div>
+</section>
+
+<!--<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Popup Image"> 
+</div>-->
+
+<audio id="musikUndangan" loop>
+    <source src="Musik.mp3" type="audio/mpeg">
+</audio>
+
+<section class="gift-section">
+    <h2>Wedding Gift</h2>
+    <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, Anda dapat mengirimkannya melalui:</p>
+    
+    <div class="gift-container">
+        <div class="gift-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="Logo BCA" class="bank-logo">
+            <p class="account-number" id="rek1">3310586365</p>
+            <p class="account-name">A/N Nurfa</p>
+            <button onclick="copyText('rek1')" class="btn-copy">Salin No. Rekening</button>
+        </div>
+
+        <div class="gift-card">
+           <!-- <img src="https://raw.githubusercontent.com/SA-Team/Logos/main/Aladin.svg" alt="Logo Bank Aladin" class="bank-logo"> -->
+
+
+            <p class="account-number" id="rek2">50160676194</p>
+            <p class="account-name">A/N Nurfa</p>
+            <button onclick="copyText('rek2')" class="btn-copy">Salin Nomor</button>
+        </div>
+    </div>
+</section>
+
+<section class="wish-section">
+    <div class="guestbook-container">
+        <div class="guestbook-header">
+            <h2>Ucapan & Doa Restu</h2>
+            <p>Berikan ucapan manis untuk kedua mempelai</p>
+        </div>
+
+        <form id="form-ucapan" class="form-ucapan">
+            <div class="input-group">
+                <label for="nama">Nama Anda</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+
+            <div class="input-group">
+                <label for="pesan">Pesan Anda</label>
+                <textarea id="pesan" placeholder="Tuliskan ucapan & doa restu di sini..." rows="4" required></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="btnKirim" class="btn-aesthetic" onclick="handleKirim()">
+                    Kirim Ucapan
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="wishDisplay" class="wish-display">
+        <div class="wish-item">
+            <strong>Sahabat Nurfa & Anjas</strong>
+            <p>Selamat menempuh hidup baru! Semoga samawa selalu sampai kakek nenek.</p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
